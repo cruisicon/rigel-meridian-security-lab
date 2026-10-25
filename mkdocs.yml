@@ -1,0 +1,86 @@
+
+site_name: Rigel Meridian Systems
+site_description: Enterprise Cybersecurity Homelab and Security Engineering Journal
+site_author: cruisicon
+site_url: https://cruisicon.github.io/rigel-meridian-security-lab/
+
+repo_name: cruisicon/rigel-meridian-security-lab
+repo_url: https://github.com/cruisicon/rigel-meridian-security-lab
+
+docs_dir: docs
+site_dir: site
+
+
+extra_css:
+  - stylesheets/extra.css
+
+theme:
+  name: material
+  language: en
+  logo: assets/images/rms-emblem.png
+  favicon: assets/images/rms-emblem.png
+
+  palette:
+    - scheme: slate
+      primary: blue
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
+
+    - scheme: default
+      primary: blue
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+
+
+nav:
+  - Home: index.md
+  - Company:
+      - Company Profile: 00-company-profile.md
+  - Engineering Journal:
+      - Security Manager Journal: 01-security-manager-journal.md
+  - Infrastructure:
+      - Network Architecture: 02-network-architecture.md
+      - Identity Architecture: 03-identity-architecture.md
+  - Security & Compliance:
+      - Security Policies: 04-security-policies.md
+      - Risk Register: 05-risk-register.md
+  - Security Projects:
+      - SEC-001 Overview: projects/SEC-001-remote-workforce/index.md
+      - Requirements: projects/SEC-001-remote-workforce/requirements.md
+      - Architecture & Design: projects/SEC-001-remote-workforce/design.md
+      - Implementation: projects/SEC-001-remote-workforce/implementation.md
+      - Validation: projects/SEC-001-remote-workforce/validation.md
+
+
+
+
+markdown_extensions:
+  - admonition
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
